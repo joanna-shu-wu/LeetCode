@@ -17,9 +17,16 @@ These are the only two combinations.
 '''
 
 
+'''
+stop condition: find the array or the sum exceeds the target
+things to keep track of:the current array, their sum, and the last index(position of last candidate)
+
+'''
+
+
 class Solution:
-    def solution(self, candidates, ans,cur,target,index,sum):
-        if(sum==target):
+    def solution(self, candidates, ans,cur,target,index,sum): #it's the main engine of backtracking algorithm
+        if(sum==target): 
             ans.append(cur[:])
         elif(sum<target):#we need to add more element from the list
             n=len(candidates)
@@ -30,10 +37,10 @@ class Solution:
         return
         
 
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]: #entry point that accept input and fire up the backtracking algorith
         ans=[]
-        cur=[]
-        self.solution(candidates,ans,cur,target,0,0)
+        cur=[] #current combination
+        self.solution(candidates,ans,cur,target,0,0) #candidate and target are inputs. sum is the sum of the candidate in the current array
 
 
         return ans
