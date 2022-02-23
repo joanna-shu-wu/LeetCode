@@ -17,7 +17,7 @@ class BST:
         # Write your code here.
         pass
 	
-	# keep trakc of the parentNode
+	# keep track of the parentNode
     def remove(self, value,parentNode=None):    
 		currentNode=self
 		#step 1: find the value that need to be removed
