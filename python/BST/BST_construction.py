@@ -18,9 +18,9 @@ class BST:
         pass
 	
 	# keep trakc of the parentNode
-    def remove(self, value,parentNode=None):
-       #step 1: find the value that need to be removed
+    def remove(self, value,parentNode=None):    
 		currentNode=self
+		#step 1: find the value that need to be removed
 		while currentNode is not None:
 			if value<currentNode.value:
 				parentNode=currentNode
