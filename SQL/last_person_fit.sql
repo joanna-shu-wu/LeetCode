@@ -25,3 +25,5 @@ group by main.turn
 having sum(sec.weight)<=1000
 order by main.turn desc
 limit 1
+
+--https://betterprogramming.pub/4-ways-to-calculate-a-running-total-with-sql-986d0019185c
