@@ -3,6 +3,10 @@ Write a function that take in a BST and a positive integer K and returnsthe kth 
 '''
 #------------------------------------------------------------------------------------------------------+
 # Method 1: O(n) time | O(n) space - where n is the number of the node
+# Concept: create an empty array and a function. Everytime a function finished, it writes to the array
+# Cons: 
+#   1. it needs uses in-order traversal technique. It starts from the smallest value to the largest. It's a waste to know the smallest value since the question ask for the largest
+#   2. it needs to create an array which we really don't need.
 #------------------------------------------------------------------------------------------------------+
 # This is an input class. Do not edit.
 class BST:
