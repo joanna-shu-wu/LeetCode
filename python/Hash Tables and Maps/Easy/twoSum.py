@@ -17,8 +17,7 @@ You can return the answer in any order.
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         m={}
-        n=len(nums)
-        for i in range(0,n):
+        for i in range(len(nums)):
             x=target-nums[i] #nums[i] is the current element in the loop
             if(x in m):#check if the goal is a key in the map
                 return [m[x],i]
