@@ -1,3 +1,6 @@
+#-------------------------------------
+#two index problem, 
+#-------------------------------------
 
 def reverseWordsInString(string):
     word=[]
