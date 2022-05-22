@@ -1,5 +1,6 @@
 #-------------------------------------
 #two index problem, 
+#O(n) time|O(n) space
 #-------------------------------------
 
 def reverseWordsInString(string):
@@ -12,9 +13,9 @@ def reverseWordsInString(string):
 		elif string[startWordidx]==" ": #if the character is not equal to space, we check if the startOfWord is equal to a space
 			word.append(" ")
 			startWordidx=idx
-	word.append(string[startWordidx:])
+	word.append(string[startWordidx:]) # It's for the last word because it would never meet the for loop condition
 	reverseList(word)
-    return "".join(word)
+    return "".join(word)#take all the elements in the list (reversed) and create a string
 
 def reverseList(list):
 	start,end=0,len(list)-1
