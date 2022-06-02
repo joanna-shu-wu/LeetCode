@@ -11,14 +11,14 @@ def taskAssignment(k, tasks):
     pairedTasks=[]
     taskDurationIdx=getTaskDurationIdx(tasks)
 
-    sortedTasks=sorted(tasks)
+    sortedTasks=sorted(tasks) #pair the shortest task with the longest task
 
-    for idx in range(k):
-        task1Duration=sortedTasks[idx]
-        idxWithTask1Duration=taskDurationIdx[task1Duration]
-        task1Idx=idxWithTask1Duration.pop()
+    for idx in range(k): #2 tasks per worker. So loop through all the worker. 
+        task1Duration=sortedTasks[idx] #the shorter task's duration
+        idxWithTask1Duration=taskDurationIdx[task1Duration] #use the task duration to grab the idx in the dict
+        task1Idx=idxWithTask1Duration.pop()#remove the idx
 
-        tasks2SortedIdx=len(tasks)-1-idx
+        tasks2SortedIdx=len(tasks)-1-idx #the longer task's duration
         task2Duration=sortedTasks[tasks2SortedIdx]
         idxWithTask2Duration=taskDurationIdx[task2Duration]
         task2Idx=idxWithTask2Duration.pop()
@@ -28,7 +28,7 @@ def taskAssignment(k, tasks):
     return pairedTasks
 
 def getTaskDurationIdx(tasks):
-    taskDurationIdx={}
+    taskDurationIdx={} #use dict because some tasks takes the same duration
 
     for idx,taskDuration in enumerate(tasks):
         if taskDuration in taskDurationIdx:
