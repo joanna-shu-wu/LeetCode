@@ -19,3 +19,6 @@ class Solution:
         for num in nums:
             if(m[num]>len(nums)//2): # this loop check the occurance frequency of the num in the map 
                 return num
+                
+
+

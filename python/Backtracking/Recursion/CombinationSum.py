@@ -18,7 +18,7 @@ These are the only two combinations.
 
 
 '''
-stop condition: find the array or the sum exceeds the target
+stop condition: find the array or the sum exceeds the target.
 things to keep track of:the current array, their sum, and the last index(position of last candidate)
 
 '''
