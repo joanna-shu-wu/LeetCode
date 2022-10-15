@@ -37,3 +37,4 @@ SELECT *,
 FROM 
   CTE_LAGGED
 )
+
