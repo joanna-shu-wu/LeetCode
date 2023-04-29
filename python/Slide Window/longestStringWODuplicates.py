@@ -1,7 +1,10 @@
+'''
+slide window recipe: for+if/while
+'''
 def longestStringWODuplicates(s):
-    charSet=set()
-    l=0
-    res=0
+    charSet=set() #initial temp container
+    l=0 # initial the beginning of the window,
+    res=0 #initial result
 
     for r in range(len(s)):
         while s[r] in charSet:
