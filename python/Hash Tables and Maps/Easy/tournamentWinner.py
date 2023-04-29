@@ -1,4 +1,14 @@
 home_team_won=1
+
+
+
+# if the team name does not exist in the hash table, add the team as key and assign 3 as value (since it won)
+# if the team name exist in the hash table, add 3 to the value
+def updateScore(team,point,scoreboard):
+	if team not in scoreboard:
+		scoreboard[team]=0
+	scoreboard[team]=scoreboard[team]+point
+
 def tournamentWinner(competitions, results):
 	currentBestTeam=""
     #use a hash table to store the total points collected by each team
@@ -15,10 +25,4 @@ def tournamentWinner(competitions, results):
 			currentBestTeam=wonTeam
     return currentBestTeam
 
-# if the team name does not exist in the hash table, add the team as key and assign 3 as value (since it won)
-# if the team name exist in the hash table, add 3 to the value
-def updateScore(team,point,scoreboard):
-	if team not in scoreboard:
-		scoreboard[team]=0
-	scoreboard[team]=scoreboard[team]+point
 		

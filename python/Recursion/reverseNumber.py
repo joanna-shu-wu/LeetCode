@@ -13,5 +13,10 @@ def reverse_number(n):
     reverse_number(n/10)
    
     
-reverse_number(1234)
+reverse_number(1)
 print(sum)
+
+print(math.floor(1))
+print(math.floor(0.1))
+
+print(1%10)
