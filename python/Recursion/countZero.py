@@ -17,4 +17,4 @@ def helper(number,count):
         return helper(number/10,count+1)
     return helper(number/10,count)
 
-print(countZero(332))
+print(countZero(3020))
