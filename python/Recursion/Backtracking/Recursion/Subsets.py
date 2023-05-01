@@ -27,3 +27,24 @@ class Solution:
         cur=[]
         self.solution(nums,ans,cur,0)
         return ans
+
+#https://www.youtube.com/watch?v=REOH22Xwdkk
+def subset(array):
+    result=[] #it has global access for the dfs function
+    subset=[] #it has global access for the dfs function
+    def dfs(index):
+        if index>=len(array): #base case
+            result.append(subset.copy()) #we are at the leaf node so we add the copy of the subset
+            return #return because it is out of bound
+        
+        #To include array[i], it's the left branch of the decision tree
+        subset.append(array[index])
+        dfs(index+1)
+
+        #Not to include array[i]. We pop the element we just appened
+        subset.pop()
+        dfs(index+1)
+    dfs(0)
+    return result
+
+print(subset([1,2,3]))
