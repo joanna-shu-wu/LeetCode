@@ -4,7 +4,7 @@ def sorted(array):
     index=0
     return helper(array, index)
 
-def helper(array, index):
+def helper(array, index): #The same "object" is being referenced, just different "reference" during each function call
     if index==len(array)-1:
        return True # when the index reach the last element, it has nothing to compare with, so just return true
     return array[index]<array[index+1] and helper(array,index+1)

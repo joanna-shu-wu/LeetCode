@@ -2,12 +2,14 @@
 Input: nums = [1,1,1,2,2,3], k = 2
 Output: [1,2]
 '''
+from collections import defaultdict
+
 def topKFrequent(nums,k):
     count = {}
     freq = [[] for i in range(len(nums) + 1)]
 
     for n in nums:
-        count[n] = 1 + count.get(n, 0)
+        count[n] =1+count.get(n, 0) #{5:2,4:1,9:1,7:1}
     for n, c in count.items():
         freq[c].append(n)
 
