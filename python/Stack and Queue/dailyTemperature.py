@@ -8,7 +8,7 @@ class Solution:
 
         for idx in range(len(T)):
             while nextWarmerIndex<len(T):
-                if T[idx]<T[nextWarmerIndex]:
+                if temperatures[idx]<T[nextWarmerIndex]:
                     daysSince=0
                     daysSince+=1
                     result[idx]=daysSince
