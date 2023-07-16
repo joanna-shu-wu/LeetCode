@@ -8,12 +8,13 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 
 '''
 slide window recipe: initial result,initial the beginning of the window,, then for+if/while
+Sliding window uses one pointer and one variable for the window size to find a window within the sequence.
 '''
 # Joanna solution. It's wrong. 
 def bestTimeBuyStock(arr):
     maxProfit=0 #initial result
     l=0 #initial the beginning of the window,
-    for l in range(len(arr)):
+    for l in range(len(arr)): #update the pointer to a new location
         for r in range(len(arr)):
             while arr[r]<arr[l]:
                 break
