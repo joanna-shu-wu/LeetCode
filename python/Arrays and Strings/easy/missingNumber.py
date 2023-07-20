@@ -1,20 +1,17 @@
+"""
+Input: nums = [3,0,1]
+Output: 2
+Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.
+"""
 from typing import List
+
 class Solution:
-    def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
-        '''  nums.sort()
-        result=[]
-        for idx,num in enumerate(nums):
-            if idx+1!=num:
-                result.append(idx+1)
-        return result
-        '''
-        set_nums = set(nums)
-        result=[]
-        for num in range(1,len(nums)+1):
-            if num not in set_nums:
-                result.append(num)
-        return result
-
-code=Solution()
-
-print(code.findDisappearedNumbers([1,1]))
+    def missingNumber(self, nums: List[int]) -> int:
+        n = len(nums)
+        expected_sum = (n * (n + 1)) // 2  # Sum of numbers from 1 to n
+        actual_sum = sum(nums)
+        missing_number = expected_sum - actual_sum
+        return missing_number
+            
+sol=Solution()
+print(sol.missingNumber([3,0,1]))
