@@ -23,4 +23,4 @@ class Solution:
 
 code=Solution()
 
-print(code.findDisappearedNumbers([1,1]))
+print(code.findDisappearedNumbers([4,3,2,7,8,2,3,1]))

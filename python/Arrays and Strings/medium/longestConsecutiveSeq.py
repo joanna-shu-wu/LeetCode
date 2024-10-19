@@ -18,7 +18,7 @@ print(longestConsecutiveSeq([100,4,200,1,3,2]))
 
 
 #without using sort
-def longestConsecutive(nums):
+def longestConsecutiveWithoutSort(nums):
     numSet = set(nums)
     longest = 0
 
@@ -30,3 +30,5 @@ def longestConsecutive(nums):
                 length += 1
             longest = max(length, longest)
     return longest
+
+longestConsecutiveWithoutSort([4,200,1,3,2])
