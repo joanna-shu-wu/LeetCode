@@ -1,3 +1,0 @@
-#testing
-def test():
-    pass

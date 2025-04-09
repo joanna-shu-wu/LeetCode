@@ -9,7 +9,7 @@ def topKFrequent(nums,k):
     freq = [[] for i in range(len(nums) + 1)]
 
     for n in nums:
-        count[n] =1+count.get(n, 0) #{5:2,4:1,9:1,7:1}
+        count[n] =1+count.get(n, 0) #{5:3,4:2,9:1,7:1,6:1}
     for n, c in count.items():
         freq[c].append(n)
 
