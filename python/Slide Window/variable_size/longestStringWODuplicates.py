@@ -16,7 +16,7 @@ def longestStringWODuplicates(s):
     return res
 
 def main():
-    print(longestStringWODuplicates('abcab'))
+    print(longestStringWODuplicates('abba'))
 
 if __name__=='__main__':
     main()
