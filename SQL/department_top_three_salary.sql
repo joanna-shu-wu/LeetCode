@@ -37,7 +37,8 @@ Output:
 -- window function
 select department.name as department, e.name as employee, e.salary
 from
-(select departmentId,name,salary,dense_rank(partition by departmentId order by salary desc) as r
+(select departmentId,name,salary
+,dense_rank(partition by departmentId order by salary desc) as r
 from employee) e
 join department d
 on e.departmentId=d.id

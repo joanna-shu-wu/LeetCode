@@ -31,7 +31,7 @@ In 2015-01-04, the temperature was higher than the previous day (20 -> 30).
 -- date type function
 
 select w2.id
-from weather w1
-join weather w2
+from weather w1 --yesterday
+join weather w2 --today
 on datediff(w1.recordDate,w2.recordDate)=-1 --date in w1 is smaller than date in w2
 where w2.temperature>w1.temperature -- today temperature higher than yesterday's temperature
